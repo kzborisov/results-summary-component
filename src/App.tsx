@@ -36,11 +36,11 @@ function App() {
                     <h3 className={styles.summary}>Summary</h3>
 
                     <div className={styles.resultsContainer}>
-                        {data.map((elem: CardI, idx: number) => (
+                        {data.map((card: CardI, idx: number) => (
                             <React.Fragment key={idx}>
                                 <Card
-                                    title={elem.category}
-                                    score={elem.score}
+                                    title={card.category}
+                                    score={card.score}
                                 />
                             </React.Fragment>
                         ))}
