@@ -26,7 +26,7 @@ This challenge has something for everyone. It’s a HTML and CSS only project, b
 ### Links
 
 -   Solution URL: [Click!](https://github.com/kzborisov/results-summary-component)
--   Live Site URL: [Click!](https://your-live-site-url.com)
+-   Live Site URL: [Click!](https://main.d2w6b36s2b79wv.amplifyapp.com/)
 
 ## My process
 
