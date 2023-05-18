@@ -1,0 +1,142 @@
+@import "./assets/variables";
+
+@mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media (min-width: #{$screen-sm-min}) {
+        @content;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        padding: 30px;
+        color: $text-white;
+        text-align: center;
+        background: $bg-gradient-light;
+        border-radius: 0 0 40px 40px;
+
+        .headerTitle {
+            font-size: 18px;
+            letter-spacing: 0.1px;
+            color: $text-white;
+            font-weight: 500;
+            color: #cecece;
+        }
+
+        .score {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            background: $gradient-violet;
+            padding: 25px 45px;
+            border-radius: 50%;
+
+            h6 {
+                text-align: center;
+                font-size: 60px;
+                color: $text-white;
+            }
+
+            p {
+                font-weight: 600;
+                color: #cecece;
+            }
+        }
+
+        .result {
+            font-size: 24px;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+        }
+
+        .comment {
+            font-size: 14px;
+            text-align: center;
+            width: 80%;
+            line-height: 20px;
+            font-weight: 500;
+            color: #cecece;
+        }
+    }
+
+    .mainContent {
+        padding: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .summary {
+            font-weight: 500;
+        }
+
+        .resultsContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .btn {
+            outline: none;
+            border: none;
+            background: $dark-gray;
+            color: $text-white;
+            font-weight: 700;
+            padding: 30px;
+            border-radius: 40px;
+            cursor: pointer;
+        }
+    }
+}
+
+@include xl {
+    .container {
+        flex-direction: row;
+        align-items: unset;
+        justify-content: unset;
+        width: 700px;
+        position: relative;
+        box-shadow: 10px 10px 50px#4e4e4e15;
+
+        .header {
+            border-radius: 40px;
+            width: 100%;
+            gap: 40px;
+            justify-content: space-evenly;
+
+            .comment {
+                font-size: 18px;
+            }
+        }
+
+        .mainContent {
+            padding: 30px;
+            .summary {
+                font-weight: 700;
+                letter-spacing: 0.8px;
+            }
+
+            .btn {
+                font-size: 18px;
+                padding: 15px;
+            }
+        }
+    }
+}
