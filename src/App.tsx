@@ -1,10 +1,10 @@
 import styles from "./App.module.scss";
 import data from "../../data.json";
 import Card from "./components/Card";
-import React from "react";
+import React, { MouseEvent } from "react";
 
 function App() {
-    const handleClick = (e: MouseEvent) => {
+    const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
         alert("Button clicked");
     };
@@ -35,7 +35,6 @@ function App() {
                                 <Card
                                     title={elem.category}
                                     score={elem.score}
-                                    icon={elem.icon}
                                 />
                             </React.Fragment>
                         ))}
