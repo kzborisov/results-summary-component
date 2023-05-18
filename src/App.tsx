@@ -1,7 +1,13 @@
 import styles from "./App.module.scss";
-import data from "../../data.json";
+import data from "../data.json";
 import Card from "./components/Card";
 import React, { MouseEvent } from "react";
+
+interface CardI {
+    category: string;
+    score: number;
+    icon: string;
+}
 
 function App() {
     const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
@@ -30,7 +36,7 @@ function App() {
                     <h3 className={styles.summary}>Summary</h3>
 
                     <div className={styles.resultsContainer}>
-                        {data.map((elem, idx) => (
+                        {data.map((elem: CardI, idx: number) => (
                             <React.Fragment key={idx}>
                                 <Card
                                     title={elem.category}
